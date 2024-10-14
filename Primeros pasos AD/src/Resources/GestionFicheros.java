@@ -7,9 +7,11 @@ public class GestionFicheros {
     public void trabajoFicherosBase(){
  //
         File file= new File("src/Resources/ejemplo.txt");
+
         if(!file.exists()) {
             try {
                 file.createNewFile();// Pasa el fichero de lógico a físico
+
             } catch (IOException e) {
                 System.out.println("Error en la creación del fichero");
             }
@@ -34,7 +36,8 @@ public class GestionFicheros {
         for (File item:carpeta.listFiles()){
             System.out.println(item.getName());//Como es un File lo podemos tratar con sus métodos
         }
-File AccesoaDatos = new File("/Users/Iri/Documents/DAM/SEGUNDO/Acceso a datos");
+        File AccesoaDatos = new File("C:/Users/Iri/Documents/DAM/SEGUNDO/Acceso a datos");
+
         for (File item:AccesoaDatos.listFiles()){
             if(!AccesoaDatos.isHidden()) {
                 System.out.println(item.getName());
